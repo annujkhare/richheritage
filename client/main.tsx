@@ -6,5 +6,5 @@ if (!container) {
   throw new Error("Root container #root not found");
 }
 
-const root = createRoot(container);
+const root = createRoot(container); 
 root.render(<App />);
