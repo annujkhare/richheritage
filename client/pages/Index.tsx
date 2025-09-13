@@ -5,29 +5,65 @@ import { Link } from "react-router-dom";
 
 const media = {
   videos: [
-    { title: "Bharatanatyam Performance", url: "https://www.youtube.com/embed/4uQ8Zc2f1SM" },
-    { title: "Holi Festival in Vrindavan (360°)", url: "https://www.youtube.com/embed/Y3LQ2G2JV2g" },
+    {
+      title: "Bharatanatyam Performance",
+      url: "https://www.youtube.com/embed/4uQ8Zc2f1SM",
+    },
+    {
+      title: "Holi Festival in Vrindavan (360°)",
+      url: "https://www.youtube.com/embed/Y3LQ2G2JV2g",
+    },
   ],
   images: [
-    { title: "Taj Mahal, Agra", src: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1600&auto=format&fit=crop" },
-    { title: "Hawa Mahal, Jaipur", src: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1600&auto=format&fit=crop" },
-    { title: "Backwaters, Kerala", src: "https://images.unsplash.com/photo-1602785164804-77f2b46a3a74?q=80&w=1600&auto=format&fit=crop" },
-    { title: "Varanasi Ghats", src: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=1600&auto=format&fit=crop" },
+    {
+      title: "Taj Mahal, Agra",
+      src: "https://images.unsplash.com/photo-1533105079780-92b9be482077?q=80&w=1600&auto=format&fit=crop",
+    },
+    {
+      title: "Hawa Mahal, Jaipur",
+      src: "https://images.unsplash.com/photo-1548013146-72479768bada?q=80&w=1600&auto=format&fit=crop",
+    },
+    {
+      title: "Backwaters, Kerala",
+      src: "https://images.unsplash.com/photo-1602785164804-77f2b46a3a74?q=80&w=1600&auto=format&fit=crop",
+    },
+    {
+      title: "Varanasi Ghats",
+      src: "https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=1600&auto=format&fit=crop",
+    },
   ],
 };
 
 const regions = [
-  { name: "North", img: "https://images.unsplash.com/photo-1549893079-842e6e66ea0a?q=80&w=1200&auto=format&fit=crop" },
-  { name: "West", img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop" },
-  { name: "South", img: "https://images.unsplash.com/photo-1545243424-0ce743321e11?q=80&w=1200&auto=format&fit=crop" },
-  { name: "East", img: "https://images.unsplash.com/photo-1524499982521-1ffb7f17fd3f?q=80&w=1200&auto=format&fit=crop" },
+  {
+    name: "North",
+    img: "https://images.unsplash.com/photo-1549893079-842e6e66ea0a?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    name: "West",
+    img: "https://images.unsplash.com/photo-1544735716-392fe2489ffa?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    name: "South",
+    img: "https://images.unsplash.com/photo-1545243424-0ce743321e11?q=80&w=1200&auto=format&fit=crop",
+  },
+  {
+    name: "East",
+    img: "https://images.unsplash.com/photo-1524499982521-1ffb7f17fd3f?q=80&w=1200&auto=format&fit=crop",
+  },
 ];
 
 const themes = [
   { name: "Festivals", color: "from-[hsl(30,95%,55%)] to-[hsl(7,85%,55%)]" },
-  { name: "Art & Dance", color: "from-[hsl(210,90%,45%)] to-[hsl(230,80%,55%)]" },
+  {
+    name: "Art & Dance",
+    color: "from-[hsl(210,90%,45%)] to-[hsl(230,80%,55%)]",
+  },
   { name: "Cuisine", color: "from-[hsl(160,70%,40%)] to-[hsl(140,65%,45%)]" },
-  { name: "Heritage Sites", color: "from-[hsl(42,95%,55%)] to-[hsl(30,90%,55%)]" },
+  {
+    name: "Heritage Sites",
+    color: "from-[hsl(42,95%,55%)] to-[hsl(30,90%,55%)]",
+  },
 ];
 
 export default function Index() {
@@ -64,7 +100,9 @@ export default function Index() {
                 Discover India's living heritage
               </h1>
               <p className="mt-4 text-lg text-muted-foreground max-w-prose">
-                Dive into regions, festivals, art, cuisine, and monuments through interactive maps, immersive tours, and a rich multimedia library.
+                Dive into regions, festivals, art, cuisine, and monuments
+                through interactive maps, immersive tours, and a rich multimedia
+                library.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Button asChild className="bg-primary">
@@ -76,7 +114,9 @@ export default function Index() {
               </div>
               <div className="mt-6 flex flex-wrap items-center gap-2 text-xs text-muted-foreground">
                 {recs.map((r) => (
-                  <span key={r} className="rounded-full bg-muted px-3 py-1">{r}</span>
+                  <span key={r} className="rounded-full bg-muted px-3 py-1">
+                    {r}
+                  </span>
                 ))}
               </div>
             </div>
@@ -84,7 +124,9 @@ export default function Index() {
               <MapWidget height={360} />
               <div className="mt-3 flex items-center justify-between text-xs text-muted-foreground">
                 <span>Click markers to preview hotspots</span>
-                <Link to="/map" className="underline hover:text-primary">Open full map</Link>
+                <Link to="/map" className="underline hover:text-primary">
+                  Open full map
+                </Link>
               </div>
             </div>
           </div>
@@ -98,10 +140,20 @@ export default function Index() {
             <h2 className="text-2xl font-bold">Explore by Region</h2>
             <div className="mt-4 grid grid-cols-2 gap-4">
               {regions.map((r) => (
-                <Link key={r.name} to="/resources" className="group relative overflow-hidden rounded-xl border">
-                  <img src={r.img} alt={r.name} className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                <Link
+                  key={r.name}
+                  to="/resources"
+                  className="group relative overflow-hidden rounded-xl border"
+                >
+                  <img
+                    src={r.img}
+                    alt={r.name}
+                    className="h-36 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                  <div className="absolute bottom-2 left-2 rounded bg-background/80 px-2 py-1 text-sm font-semibold">{r.name}</div>
+                  <div className="absolute bottom-2 left-2 rounded bg-background/80 px-2 py-1 text-sm font-semibold">
+                    {r.name}
+                  </div>
                 </Link>
               ))}
             </div>
@@ -110,10 +162,19 @@ export default function Index() {
             <h2 className="text-2xl font-bold">Explore by Theme</h2>
             <div className="mt-4 grid grid-cols-2 gap-4">
               {themes.map((t) => (
-                <Link key={t.name} to="/resources" className={`group relative rounded-xl border bg-gradient-to-br ${t.color} p-4 text-white`}>
+                <Link
+                  key={t.name}
+                  to="/resources"
+                  className={`group relative rounded-xl border bg-gradient-to-br ${t.color} p-4 text-white`}
+                >
                   <h3 className="text-lg font-semibold">{t.name}</h3>
-                  <p className="mt-2 text-white/80 text-sm max-w-[28ch]">Curated articles, media, and maps for {t.name.toLowerCase()}.</p>
-                  <span className="pointer-events-none absolute right-3 top-3 text-white/70">→</span>
+                  <p className="mt-2 text-white/80 text-sm max-w-[28ch]">
+                    Curated articles, media, and maps for {t.name.toLowerCase()}
+                    .
+                  </p>
+                  <span className="pointer-events-none absolute right-3 top-3 text-white/70">
+                    →
+                  </span>
                 </Link>
               ))}
             </div>
@@ -127,7 +188,8 @@ export default function Index() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <h2 className="text-2xl font-bold">Virtual Tours</h2>
             <p className="text-sm text-muted-foreground max-w-prose">
-              Immerse yourself in monuments and festivals. Support for AR/VR devices will be added via ARCore/ARKit modules.
+              Immerse yourself in monuments and festivals. Support for AR/VR
+              devices will be added via ARCore/ARKit modules.
             </p>
           </div>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
@@ -141,9 +203,13 @@ export default function Index() {
               />
             </div>
             <div className="rounded-xl border p-6 bg-card">
-              <h3 className="text-xl font-semibold">Launch interactive tours</h3>
+              <h3 className="text-xl font-semibold">
+                Launch interactive tours
+              </h3>
               <p className="mt-2 text-sm text-muted-foreground max-w-prose">
-                Try a sample 360° experience now, with upcoming options for headset and mobile AR. Connect a backend to manage tour metadata and analytics.
+                Try a sample 360° experience now, with upcoming options for
+                headset and mobile AR. Connect a backend to manage tour metadata
+                and analytics.
               </p>
               <div className="mt-4 flex gap-3">
                 <Button asChild>
@@ -162,12 +228,21 @@ export default function Index() {
       <section className="container py-12">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">Multimedia Library</h2>
-          <Link to="/library" className="text-sm underline hover:text-primary">View all</Link>
+          <Link to="/library" className="text-sm underline hover:text-primary">
+            View all
+          </Link>
         </div>
         <div className="mt-6 grid gap-4 md:grid-cols-4">
           {media.images.map((m) => (
-            <figure key={m.title} className="group overflow-hidden rounded-xl border bg-card">
-              <img src={m.src} alt={m.title} className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105" />
+            <figure
+              key={m.title}
+              className="group overflow-hidden rounded-xl border bg-card"
+            >
+              <img
+                src={m.src}
+                alt={m.title}
+                className="h-40 w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
               <figcaption className="p-3 text-sm">{m.title}</figcaption>
             </figure>
           ))}
@@ -179,11 +254,23 @@ export default function Index() {
         <div className="container py-12">
           <h2 className="text-2xl font-bold">Educational Resources</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {["Timeline of Indian History","Epics: Ramayana & Mahabharata","Schools of Indian Philosophy"].map((t) => (
+            {[
+              "Timeline of Indian History",
+              "Epics: Ramayana & Mahabharata",
+              "Schools of Indian Philosophy",
+            ].map((t) => (
               <article key={t} className="rounded-xl border bg-card p-5">
                 <h3 className="font-semibold">{t}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">Detailed articles with citations, timelines, and maps to help students and researchers.</p>
-                <Link to="/resources" className="mt-3 inline-flex text-sm underline hover:text-primary">Read more</Link>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  Detailed articles with citations, timelines, and maps to help
+                  students and researchers.
+                </p>
+                <Link
+                  to="/resources"
+                  className="mt-3 inline-flex text-sm underline hover:text-primary"
+                >
+                  Read more
+                </Link>
               </article>
             ))}
           </div>
@@ -194,20 +281,37 @@ export default function Index() {
       <section className="container py-14">
         <div className="relative overflow-hidden rounded-2xl border bg-gradient-to-br from-[hsl(30,95%,55%)] via-[hsl(160,70%,40%)] to-[hsl(210,90%,45%)] p-8 text-white">
           <div className="relative z-10">
-            <h2 className="text-2xl md:text-3xl font-extrabold">Join the community</h2>
+            <h2 className="text-2xl md:text-3xl font-extrabold">
+              Join the community
+            </h2>
             <p className="mt-2 max-w-prose text-white/90">
-              Share stories, crowdsource cultural hotspots, and upload your photos, videos, and audio to preserve local traditions.
+              Share stories, crowdsource cultural hotspots, and upload your
+              photos, videos, and audio to preserve local traditions.
             </p>
             <div className="mt-5 flex flex-wrap gap-3">
               <Button asChild variant="secondary">
                 <Link to="/forum">Go to Forum</Link>
               </Button>
-              <Button asChild variant="outline" className="bg-white/10 text-white hover:bg-white/20">
+              <Button
+                asChild
+                variant="outline"
+                className="bg-white/10 text-white hover:bg-white/20"
+              >
                 <Link to="/library">Contribute Media</Link>
               </Button>
             </div>
           </div>
-          <svg className="absolute -right-10 -top-10 h-48 w-48 opacity-30" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M39.7,-58.7C51.1,-52.1,61.2,-42.6,67.3,-30.8C73.4,-19,75.4,-4.9,73.3,8.8C71.2,22.5,65,35.8,55.5,46.3C45.9,56.9,33,64.7,20.1,65.4C7.2,66.1,-5.6,59.8,-19,55.7C-32.3,51.6,-46.1,49.8,-56.1,42.4C-66.1,35,-72.3,22,-73.6,8.1C-74.9,-5.9,-71.2,-20.7,-63.2,-32.1C-55.2,-43.6,-42.8,-51.7,-30.7,-59.3C-18.6,-66.8,-7.8,-73.9,3.6,-78.6C15.1,-83.3,30.2,-85.4,39.7,-58.7Z" transform="translate(100 100)" /></svg>
+          <svg
+            className="absolute -right-10 -top-10 h-48 w-48 opacity-30"
+            viewBox="0 0 200 200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill="#fff"
+              d="M39.7,-58.7C51.1,-52.1,61.2,-42.6,67.3,-30.8C73.4,-19,75.4,-4.9,73.3,8.8C71.2,22.5,65,35.8,55.5,46.3C45.9,56.9,33,64.7,20.1,65.4C7.2,66.1,-5.6,59.8,-19,55.7C-32.3,51.6,-46.1,49.8,-56.1,42.4C-66.1,35,-72.3,22,-73.6,8.1C-74.9,-5.9,-71.2,-20.7,-63.2,-32.1C-55.2,-43.6,-42.8,-51.7,-30.7,-59.3C-18.6,-66.8,-7.8,-73.9,3.6,-78.6C15.1,-83.3,30.2,-85.4,39.7,-58.7Z"
+              transform="translate(100 100)"
+            />
+          </svg>
         </div>
       </section>
     </main>

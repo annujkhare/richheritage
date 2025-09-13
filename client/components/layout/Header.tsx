@@ -19,7 +19,9 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
           <div className="h-9 w-9 rounded-full bg-gradient-to-br from-[hsl(30,100%,50%)] via-[hsl(30,85%,45%)] to-[hsl(160,70%,40%)] shadow-md" />
-          <span className="font-extrabold tracking-tight text-lg md:text-xl">Bharat Heritage</span>
+          <span className="font-extrabold tracking-tight text-lg md:text-xl">
+            Bharat Heritage
+          </span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {nav.map((n) => (
@@ -45,7 +47,15 @@ export default function Header() {
           className="md:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border"
           onClick={() => setOpen((v) => !v)}
         >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-foreground">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            className="text-foreground"
+          >
             <path d="M3 6h18M3 12h18M3 18h18" />
           </svg>
         </button>

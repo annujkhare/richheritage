@@ -35,11 +35,51 @@ const App = () => (
         <Routes>
           <Route element={<Layout />}>
             <Route path="/" element={<Index />} />
-            <Route path="/map" element={<Placeholder title="Interactive Map" description="A dedicated full-screen map experience with layers for festivals, heritage sites, cuisine, and art forms will be added here." />} />
-            <Route path="/library" element={<Placeholder title="Multimedia Library" description="Curated videos, high-quality images, and audio of traditional music and dance will live here." />} />
-            <Route path="/resources" element={<Placeholder title="Educational Resources" description="In-depth articles on history, mythology, philosophy, and cultural timelines will be here." />} />
-            <Route path="/forum" element={<Placeholder title="Community Forum" description="Discuss, ask questions, and share cultural experiences with the community." />} />
-            <Route path="/admin" element={<Placeholder title="Admin Panel" description="Manage content, users, and analytics. Connect a backend to enable administration workflows." />} />
+            <Route
+              path="/map"
+              element={
+                <Placeholder
+                  title="Interactive Map"
+                  description="A dedicated full-screen map experience with layers for festivals, heritage sites, cuisine, and art forms will be added here."
+                />
+              }
+            />
+            <Route
+              path="/library"
+              element={
+                <Placeholder
+                  title="Multimedia Library"
+                  description="Curated videos, high-quality images, and audio of traditional music and dance will live here."
+                />
+              }
+            />
+            <Route
+              path="/resources"
+              element={
+                <Placeholder
+                  title="Educational Resources"
+                  description="In-depth articles on history, mythology, philosophy, and cultural timelines will be here."
+                />
+              }
+            />
+            <Route
+              path="/forum"
+              element={
+                <Placeholder
+                  title="Community Forum"
+                  description="Discuss, ask questions, and share cultural experiences with the community."
+                />
+              }
+            />
+            <Route
+              path="/admin"
+              element={
+                <Placeholder
+                  title="Admin Panel"
+                  description="Manage content, users, and analytics. Connect a backend to enable administration workflows."
+                />
+              }
+            />
           </Route>
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
